@@ -1,7 +1,7 @@
 ## iOS 链式编程
 
 
-``òbjc
+```objc
 
 	- (void)viewDidLoad {
 			
