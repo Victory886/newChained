@@ -5,16 +5,17 @@
 
 - (void)viewDidLoad {
         
-        [super viewDidLoad];
-        
-        self.view.backgroundColor = [UIColor greenColor];
-        
-        [self initWithUI];
-        
-        [self actionHandler];
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor greenColor];
+    
+    [self initWithUI];
+    
+    [self actionHandler];
         
 }
 
+/// 定义好的控件设置坐标
 - (void)initWithUI {
     
     self.test_lab.frame = CGRectMake(100, 100, 100, 100);
@@ -24,24 +25,29 @@
     self.test_view.frame = CGRectMake(100, 550, 100, 100);
 }
 
+/// 事件处理
 - (void)actionHandler {
     
+    // 按钮的点击事件
     [self.test_btn sl_addActionHandler:^(UIButton * _Nonnull btn) {
         
         NSLog(@"123432123");
     }];
     
+    // 图片的点击事件
     [self.test_imgView sl_addTapActionWithBlock:^(UIGestureRecognizer * _Nonnull gestureRecoginzer) {
        
         NSLog(@"图片点击");
     }];
     
+    // view 的点击事件
     [self.test_view sl_addTapActionWithBlock:^(UIGestureRecognizer * _Nonnull gestureRecoginzer) {
        
         NSLog(@"");
     }];
 }
 
+/// 初始化view
 - (SLView *)test_view {
     
     if (!_test_view) {
@@ -52,6 +58,7 @@
     return _test_view;
 }
 
+/// 初始化label
 - (SLLabel *)test_lab {
     
     if (!_test_lab) {
@@ -62,6 +69,7 @@
     return _test_lab;
 }
 
+/// 初始化button
 - (SLButton *)test_btn {
     
     if (!_test_btn) {
@@ -73,6 +81,7 @@
     return _test_btn;
 }
 
+/// 初始化textfield
 - (SLTextField *)test_txt {
     
     if (!_test_txt) {
@@ -84,6 +93,7 @@
     return _test_txt;
 }
 
+/// 初始化imageview
 - (SLImageView *)test_imgView {
     
     if (!_test_imgView) {
@@ -99,8 +109,6 @@
 
 ```
 
-
-
 链式编程自定义控件日后会越来越多的。
 
 在整个项目中都使用链式写控件话会少写很多重复的代码。
@@ -108,3 +116,6 @@
 请大家多多指教！
 
 谢谢 大家的参考~
+
+这里是我之前写的博客 
+[查看博客](https://blog.csdn.net/baidu_15100009)
