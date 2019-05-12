@@ -128,10 +128,14 @@
 }
 
 /// 密码框
-- (SLTextField *)isPwd {
+- (SLTextField *(^)(void))isPwd {
     
-    self.secureTextEntry = YES;
-    return self;
+    __weak typeof (self)ws = self;
+    return ^(void) {
+        
+        ws.secureTextEntry = YES;
+        return ws;
+    };
 }
 
 @end
