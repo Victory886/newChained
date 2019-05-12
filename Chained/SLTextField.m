@@ -127,4 +127,11 @@
     };
 }
 
+/// 密码框
+- (SLTextField *)isPwd {
+    
+    self.secureTextEntry = YES;
+    return self;
+}
+
 @end

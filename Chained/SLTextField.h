@@ -40,6 +40,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (SLTextField *(^)(UIView *superView))add;
 /// 用户交互开关 yes no 或 0 1
 
+/// 密码框
+- (SLTextField *)isPwd;
 
 @end
 
